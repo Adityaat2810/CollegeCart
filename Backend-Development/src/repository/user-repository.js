@@ -16,6 +16,15 @@ class UserRepository extends CrudRepository{
         }
     }
 
+    async getAll(){
+        try {
+            const response = await User.find({}).populate( {path : 'user'}).populate({path :'likeable'});
+            return response;
+        } catch (error) {
+            console.log("There is error in User Repository");
+        }
+    }
+
 
 }
 

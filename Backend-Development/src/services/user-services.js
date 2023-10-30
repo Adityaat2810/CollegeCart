@@ -4,8 +4,7 @@ import Jwt from "jsonwebtoken";
 import dotenv from 'dotenv'
 dotenv.config();
 
-import variable from '../config/serverConfig.js'
-import { response } from "express";
+
 
 class UserService {
   constructor() {
